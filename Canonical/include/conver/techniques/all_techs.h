@@ -1,0 +1,39 @@
+#pragma once
+
+#include <conver/techniques/recip/bin_bernoulli_cor.h>
+#include <conver/techniques/recip/bin_bernoulli_nonbin.h>
+#include <conver/techniques/recip/bin_bernoulli.h>
+#include <conver/techniques/recip/bin_pcume.h>
+#include <conver/techniques/recip/recip_cmf.h>
+#include <conver/techniques/recip/recip_pcume.h>
+#include <conver/techniques/recip/recip_ratio_minmax.h>
+#include <conver/techniques/recip/recip_ratio_rr.h>
+#include <conver/techniques/recip/recip_ratio.h>
+#include <conver/techniques/recip/sai_was.h>
+#include <conver/techniques/exp/exp_pcume.h>
+#include <conver/techniques/exp/exp_pcmf.h>
+#include <conver/techniques/exp/exp_pratio.h>
+#include <conver/techniques/exp/exp_nvidia.h>
+#include <conver/techniques/pink/pink_pcume.h>
+#include <conver/techniques/pink/pink_pcume_exp.h>
+#include <conver/techniques/pink/pink_cmf_exp.h>
+#include <conver/techniques/pink/pink_ratio_exp.h>
+#include <conver/techniques/pink/pink_nvidia_exp.h>
+#include <conver/techniques/pink/pink_nvidia.h>
+#include <conver/techniques/photon/photon_blanchet_safen.h>
+#include <conver/techniques/photon/photon_blanchet.h>
+#include <conver/techniques/photon/photon_secondary_blanchet_acap.h>
+#include <conver/techniques/photon/photon_secondary_blanchet_diff2n.h>
+#include <conver/techniques/photon/photon_secondary_blanchet_safen.h>
+#include <conver/techniques/photon/photon_secondary_blanchet.h>
+#include <conver/techniques/photon/photon_alpha_cone.h>
+#include <conver/techniques/photon/photon_prog_alpha_cone.h>
+#include <conver/techniques/photon/photon_alpha_quad.h>
+#include <conver/techniques/photon/photon_alpha_uni.h>
+#include <conver/techniques/photon/photon_square_cone.h>
+#include <conver/techniques/photon/photon_square_quad.h>
+#include <conver/techniques/photon/photon_square_quart.h>
+#include <conver/techniques/photon/photon_square_uni.h>
+#include <conver/techniques/tele_final.h>
+
+// TODO: also need to prune out all of the extranuous blanchet estimators
