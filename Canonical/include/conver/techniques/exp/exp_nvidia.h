@@ -23,7 +23,6 @@ struct NvidiaExp : Technique<T>
         std::vector<double> rr_weights = std::vector<double>();
 
         aggressive_russian_roulette(rng, p_z, rr_weights, k);
-        // TODO - maybe do optional density rotations
 
         std::vector<double> X_i = std::vector<double>();
 
@@ -67,24 +66,9 @@ struct NvidiaExp : Technique<T>
             trans += 1.0 / double(k + 1) * exp(X_j) * sum;
         }
 
-        // if (std::isnan(trans))
-        // {
-        //     std::cout << "FUCK" << std::endl;
-        //     std::cout << "k: " << k << std::endl;
-        // }
-
         return trans;
     }
 
-    virtual T sample_problem(const Problem<T> *problem, int samples, int &cost, pcg32 &rng) const
-    {
-        // What does this really have to do with anything
-        throw new ShouldNotEvaluateException("sample problem " + getName());
-
-        return (0.0);
-    }
-
-    // Need to relearn what this method is supposed to do
     //
     // Exponential form:
     // Computes the expected value of the Bhanot and Kennedy estimator
@@ -159,13 +143,6 @@ struct NvidiaExp : Technique<T>
         {
             double c_i = fmin(c / i, 1.0);
             P *= c_i;
-
-            // if (i > 100)
-            // {
-            //     std::cout << "i: " << i << std::endl;
-            //     std::cout << "P: " << 1.0 / P << std::endl;
-            //     std::cout << "u: " << u << std::endl;
-            // }
 
             if (P <= u)
             {
